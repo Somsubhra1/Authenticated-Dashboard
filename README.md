@@ -2,6 +2,10 @@
 
 A simple Authenticated dashboard using NodeJS
 
+## Demo
+
+Click [here](https://secret-journey-40800.herokuapp.com/) for demo.
+
 ## Technologies:
 
 -   NodeJS
