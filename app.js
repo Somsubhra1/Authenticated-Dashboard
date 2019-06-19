@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const flash = require("connect-flash");
 const session = require("express-session");
 const passport = require("passport");
+const path = require("path");
 
 // Passport config
 require("./strategy/passport")(passport);
@@ -51,6 +52,9 @@ app.use((req, res, next) => {
     res.locals.error = req.flash("error");
     next();
 });
+
+// Static files middleware:
+app.use(express.static(path.join(__dirname, "/public")));
 
 // Routes
 app.use("/", require("./routes/index"));
